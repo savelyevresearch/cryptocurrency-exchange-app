@@ -1,12 +1,10 @@
-import { ethers } from "hardhat";
-
 const main = async () => {
   const transactionsFactory = await ethers.getContractFactory("Transactions");
   const transactionsContract = await transactionsFactory.deploy();
 
   await transactionsContract.deployed();
 
-  console.log("Transactions address: ", transactionsContract.address);
+  console.log("The Transactions smartcontract deployed to: ", transactionsContract.address);
 };
 
 const runMain = async () => {
